@@ -1,4 +1,3 @@
-// lib/main.dart
 import 'package:flutter/material.dart';
 import 'paginas/login.dart';
 import 'paginas/registro.dart';
@@ -18,7 +17,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginScreen(),
         '/register': (context) => RegisterScreen(),
-        '/home': (context) => HomeScreen(name: 'Usuario'),
+        '/home': (context) => HomeScreen(
+          name: 'Usuario', // Aquí puedes pasar el nombre del usuario
+          recordScore: 0,   // Puntaje por defecto
+          recordTime: 0,    // Tiempo por defecto
+        ),
       },
     );
   }
